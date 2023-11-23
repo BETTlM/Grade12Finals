@@ -1,3 +1,4 @@
+
 # Grade12Finals
 Grade 12 2023 24 final year computer science project 
 
@@ -14,3 +15,9 @@ I have no idea how I made this to work but it works so please dont change anythi
 7. threading
 8. font from tkinter
 9. canvas from tkinter
+
+
+#Running the program
+Make sure to install the required modules
+Run the `running.py` , do not try to run other files on its own
+If the UI doesnt pop up (which happens often), kill the processes and re-run the `running.py` in a new terminal
