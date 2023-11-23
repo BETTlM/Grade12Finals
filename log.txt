@@ -1,0 +1,6 @@
+ID: 1 crossed going down at Thu Nov 23 22:34:45 2023
+ID: 1 crossed going down at Thu Nov 23 22:34:46 2023
+ID: 2 crossed going down at Thu Nov 23 22:34:53 2023
+ID: 3 crossed going down at Thu Nov 23 22:34:59 2023
+ID: 5 crossed going up at Thu Nov 23 22:35:00 2023
+ID: 7 crossed going down at Thu Nov 23 22:35:05 2023
