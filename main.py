@@ -256,7 +256,7 @@ while(cap.isOpened()):
                         
                             print( "ID:",i.getId(),'crossed going up at',time.strftime("%c"))
                         
-                            log.write("ID: "+str(i.getId())+' crossed going up at ' + time.strftime("%c") + '\n')
+                            log.write("ID: "+str(i.getId())+' crossed going up at ' + time.strftime("%c") + '\n') #lakssss<3
                         
                         elif i.going_DOWN(line_down,line_up) == True:
                         
