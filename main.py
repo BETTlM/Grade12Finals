@@ -57,7 +57,7 @@ cnt_down = 0
 
 
 
-cap = cv.VideoCapture(r'D:\Comp Sci\CS Project\f847bf18-b824-4037-bdff-3e00e5a4d14c.mp4')
+cap = cv.VideoCapture(r'f847bf18-b824-4037-bdff-3e00e5a4d14c.mp4')
 
 
 ##Use the code below in order to switch to live tracking

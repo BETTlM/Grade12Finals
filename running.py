@@ -1,10 +1,10 @@
 import subprocess
 
-pgm_1 = r'D:\Comp Sci\CS Project\main.py'
+pgm_1 = r'main.py'
 
-pgm_2 = r'D:\Comp Sci\CS Project\trial.py'
+pgm_2 = r'trial.py'
 
-pgm_3 = r'D:\Comp Sci\CS Project\gui.py'
+pgm_3 = r'gui.py'
 
 subprocess.Popen(['python',pgm_1])
 
