@@ -1,8 +1,8 @@
-ID: 1 crossed going down at Mon Dec 23 11:20:46 2024
-ID: 2 crossed going down at Mon Dec 23 11:20:51 2024
-ID: 3 crossed going down at Mon Dec 23 11:20:54 2024
-ID: 5 crossed going up at Mon Dec 23 11:20:55 2024
-ID: 7 crossed going down at Mon Dec 23 11:20:57 2024
-ID: 9 crossed going up at Mon Dec 23 11:20:57 2024
-ID: 10 crossed going up at Mon Dec 23 11:20:57 2024
-ID: 9 crossed going down at Mon Dec 23 11:21:01 2024
+ID: 1 crossed going down at Sun Dec 29 15:25:44 2024
+ID: 2 crossed going down at Sun Dec 29 15:25:49 2024
+ID: 3 crossed going down at Sun Dec 29 15:25:52 2024
+ID: 5 crossed going up at Sun Dec 29 15:25:53 2024
+ID: 7 crossed going down at Sun Dec 29 15:25:55 2024
+ID: 9 crossed going up at Sun Dec 29 15:25:55 2024
+ID: 10 crossed going up at Sun Dec 29 15:25:56 2024
+ID: 9 crossed going down at Sun Dec 29 15:25:59 2024
