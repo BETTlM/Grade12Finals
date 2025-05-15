@@ -1,141 +1,88 @@
-import tkinter as tk
+import customtkinter as ctk
 import threading
 import time
 from tkinter import font
-from tkinter import *
 
-
-time.sleep(3)
-
-
-# Function to read the file content
-
+# Set appearance mode and default color theme
+ctk.set_appearance_mode("dark")
+ctk.set_default_color_theme("blue")
 
 def read_file():
     try:
         with open("guisrs.txt", "r") as file:
             content = file.read()
-
         return content
-
-
     except FileNotFoundError:
         return "File not found"
 
-
-
-# Function to update the text in the GUI
-
 def update_text():
-    file_content = ' '+read_file()
+    file_content = ' ' + read_file()
+    seats_label.configure(text=file_content)
+    root.after(1000, update_text)
 
-
-    text_widget.config(state=tk.NORMAL)  # Enable text widget for editing
-
-    text_widget.delete(1.0, tk.END)  # Clear the existing text
-
-    text_widget.insert(tk.END, file_content)  # Insert the new content
-
-    text_widget.config(state=tk.DISABLED)  # Disable text widget for editing
-
-    root.after(1000, update_text)  # Schedule the update every 1 second
-
-
-
-# Function to monitor the file for changes in a separate thread
 def file_monitor():
-
     previous_content = read_file()
-
     while True:
-
-        time.sleep(1)  # Check for changes every 1 second
-
+        time.sleep(1)
         current_content = read_file()
-
         if current_content != previous_content:
-
             previous_content = current_content
-
             root.event_generate("<<FileChanged>>", when="tail")
 
+# Create the main window
+root = ctk.CTk()
+root.title("Dynamic Ticket Expert")
+root.geometry('800x600')
 
-# Create the main GUI window
+# Create main frame
+main_frame = ctk.CTkFrame(root)
+main_frame.pack(fill="both", expand=True, padx=20, pady=20)
 
-root = tk.Tk()
+# Title section
+title_frame = ctk.CTkFrame(main_frame, fg_color="transparent")
+title_frame.pack(fill="x", pady=(0, 20))
 
-root.title("DYNAMIC TICKET EXPERT")
+main_title = ctk.CTkLabel(
+    title_frame,
+    text="DYNAMIC TICKET EXPERT",
+    font=ctk.CTkFont(family="Helvetica", size=32, weight="bold")
+)
+main_title.pack(pady=(0, 10))
 
-root.geometry('550x550')
+subtitle = ctk.CTkLabel(
+    title_frame,
+    text="GRAND CINEMAS",
+    font=ctk.CTkFont(family="Helvetica", size=24, weight="bold")
+)
+subtitle.pack()
 
-root.configure(bg= "cyan")
+# Seats section
+seats_frame = ctk.CTkFrame(main_frame)
+seats_frame.pack(fill="both", expand=True, padx=20, pady=20)
 
+seats_label_title = ctk.CTkLabel(
+    seats_frame,
+    text="SEATS LEFT",
+    font=ctk.CTkFont(family="Helvetica", size=28, weight="bold")
+)
+seats_label_title.pack(pady=(20, 10))
 
+seats_label = ctk.CTkLabel(
+    seats_frame,
+    text="",
+    font=ctk.CTkFont(family="Helvetica", size=120, weight="bold")
+)
+seats_label.pack(pady=20)
 
-# Create a text widget to display the file content
-
-
-# Create a custom font for the main title
-
-main_title_font = font.Font(family="Cascadia Code", size=24, weight="bold")
-
-# Create a Label for the main title
-main_title_label = tk.Label(root, text="DYNAMIC TICKET EXPERT", font=main_title_font, bg="cyan")
-main_title_label.pack(pady=30)
-
-
-
-# Create a custom font for the secondary title
-secondary_title_font = font.Font(family="Arial", size=20, slant="italic",weight="bold")
-
-
-# Create a Label for the secondary title
-secondary_title_label = tk.Label(root, text="GRAND CINEMAS", font=secondary_title_font, bg="cyan")
-secondary_title_label.pack(pady=20)
-
-
-# Create a custom font for the normal text
-normal_text_font = font.Font(family="Helvetica", size=32)
-
-# Create a Label for the normal text
-normal_text_label = tk.Label(root, text="SEATS LEFT", font=normal_text_font, bg="cyan")
-normal_text_label.pack(pady=20  )
-
-
-
-
-temp = font.Font(family="Consolas", size= 150)
-
-
-text_widget = tk.Text(root, wrap=tk.WORD,font=temp, bg="cyan")
-text_widget.tag_configure("center", justify='center')
-text_widget.tag_add("tag_name", "1.0", "end")
-text_widget.pack()
-
-
-text_widget.config(state=tk.DISABLED)  # Disable text widget for editing
-
-
-
-
-# Create a thread to monitor the file
-
-
-file_monitor_thread = threading.Thread(target=file_monitor, daemon=True)    
+# Start the file monitoring thread
+file_monitor_thread = threading.Thread(target=file_monitor, daemon=True)
 file_monitor_thread.start()
 
-
-# Bind an event to update the text widget when the file changes
-
+# Bind the file change event
 root.bind("<<FileChanged>>", lambda event: update_text())
 
-
-
 # Start the initial text update
-
 update_text()
 
-
 # Start the GUI main loop
-
 root.mainloop()
