@@ -1,8 +1,8 @@
-ID: 1 crossed going down at Mon May  5 09:50:04 2025
-ID: 2 crossed going down at Mon May  5 09:50:09 2025
-ID: 3 crossed going down at Mon May  5 09:50:12 2025
-ID: 5 crossed going up at Mon May  5 09:50:13 2025
-ID: 7 crossed going down at Mon May  5 09:50:15 2025
-ID: 9 crossed going up at Mon May  5 09:50:15 2025
-ID: 10 crossed going up at Mon May  5 09:50:15 2025
-ID: 9 crossed going down at Mon May  5 09:50:18 2025
+ID: 1 crossed going down at Fri May 23 10:38:54 2025
+ID: 2 crossed going down at Fri May 23 10:38:58 2025
+ID: 3 crossed going down at Fri May 23 10:39:01 2025
+ID: 5 crossed going up at Fri May 23 10:39:02 2025
+ID: 7 crossed going down at Fri May 23 10:39:04 2025
+ID: 9 crossed going up at Fri May 23 10:39:05 2025
+ID: 10 crossed going up at Fri May 23 10:39:05 2025
+ID: 9 crossed going down at Fri May 23 10:39:08 2025
